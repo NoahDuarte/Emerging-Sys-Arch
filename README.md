@@ -4,12 +4,14 @@ Artifact 1: "pwmled2.c" was designed to control the PWM signals for two LEDs on 
 Artifact 2: "uart2echo.c" was developed to echo characters received over UART and control an LED on a Launchpad Board based on user input. This application addressed the need to interact with a user through a UART interface and control an LED accordingly, making it a combination of hardware and user interaction.
 
 What I did particularly well:
-1. Code Explanation: I provided detailed explanations of the code and answered specific questions related to each code artifact.
-2. Code Analysis: I analyzed the purpose of each code section and highlighted key functions and variables.
+1. Clear Code Structure: Your code in Artifact 1 is well-structured and organized. It begins with necessary includes, followed by a structured main function that clearly outlines the program's flow.
+2. Error Handling: You've included error handling in the code. For instance, you check if PWM handles are successfully opened and handle cases where they are not.
+3. Structured State Machine: You've implemented a structured state machine using an enum (State) to handle different states (e.g., IDLE, LED_ON, LED_OFF). This makes the code easy to follow and maintain.
+4. Initialization Check: You check if the UART and GPIO initialization is successful and handle the situation if it fails, ensuring that the program won't continue with uninitialized hardware.
 
 Where I could improve:
-1. In the reflection, I could provide more insights into the challenges faced during the project and how I overcame them.
-2. Providing examples of specific business requirements and how emerging systems architectures and technologies can meet those requirements would enhance the recommendation section.
+1. Error Handling: Both artifacts could benefit from more robust error handling. For example, when initializing or configuring hardware, it's essential to handle potential errors gracefully. If, for some reason, the hardware initialization fails, you might want to provide better feedback or take corrective actions.
+2. Comments for Algorithmic Logic: When you have complex logic in your code, such as the duty cycle changing algorithm in Artifact 1, consider adding comments to explain the purpose and logic behind it. This can help others (and yourself) understand the code's behavior.
 
 Tools and resources added to the support network:
 I improved my understanding of embedded systems by working with TI's Code Composer Studio and their provided drivers. In future projects, I can leverage this experience and the knowledge gained from working with hardware-specific code.
